@@ -52,8 +52,8 @@ function App() {
       <div >Elevating expectations for food delivery.</div>
       <strong><div>www.cravedelivery.com</div></strong>
       <form className='form' onSubmit={handleSubmit}>
-        <div className='field'><p>We need</p> <input placeholder='We need' type="number" onChange={(e) => setWeNeed(e.target.value)} /></div>
-        <div className='field'><p>You pay</p> <input placeholder='You pay' type="number" onChange={(e) => setYouPay(e.target.value)} /></div>
+        <div className='field'><p>We need</p> <input required placeholder='We need' type="number" onChange={(e) => setWeNeed(e.target.value)} /></div>
+        <div className='field'><p>You pay</p> <input required placeholder='You pay' type="number" onChange={(e) => setYouPay(e.target.value)} /></div>
         <button type='submit'>Calculate Change</button>
       </form>
       {Object.keys(ccBills).length !== 0 && <div className='change-wrapper'>
