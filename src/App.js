@@ -79,7 +79,7 @@ function App() {
         <strong> <div className='title'>You paid the exact amount</div></strong>
         <div>Here's a fun fact for you:</div>
         <div className='funFact'>{funFact}</div>
-      </div> : ''}
+      </div> : null}
     </main>
   );
 }
