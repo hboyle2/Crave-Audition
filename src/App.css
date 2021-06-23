@@ -1,38 +1,87 @@
 .App {
   text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  max-width: 510px;
+  margin: auto;
+  line-height: 1.5;
+  padding-top: 100px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+img{
+  margin-bottom: 20px
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.form{
   display: flex;
-  flex-direction: column;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin-top: 30px;
+}
+
+.field{
+  display: flex; 
+}
+
+input{
+  border-radius: 10px;
+  margin: 10px;
+  padding: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.36);
+  max-width: 200px;
+}
+
+button{
   color: white;
+  background-color: black;
+  border-radius: 10px;
+  margin: 10px 0 30px 54px;
+  padding: 20px;
+  width: 200px;
+  text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
+.change-wrapper{
+  display: 'flex';
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 10px;
+  margin: 0 10px; 
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.bills-wrapper{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-top: 20px;
+}
+
+.bill-container{
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  margin: auto;
+  height: 146px;
+  width: 146px;
+  margin-bottom: 10px;
+}
+
+.bill{
+  font-size: 60px;
+  vertical-align: middle; 
+}
+
+.error-wrapper{
+  background-color: rgba(255, 0, 0, 0.1) ;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.title{
+  font-size: 20px;
+}
+
+.funFact{
+  margin-top: 10px
 }
