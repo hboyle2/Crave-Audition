@@ -15,28 +15,29 @@ function App() {
     setFunFact('')
     setCcBills({})
     let leftover = youPay - weNeed
-    let bills = {}
+    let changeBills = {}
     let denominations = [100, 33, 21, 7, 3, 1]
 
-    if (+youPay > +weNeed) {
+    if (leftover > 0) {
       for (let bill of denominations) {
         while (leftover >= bill) {
-          if (bills[bill]) {
-            bills[bill] += 1
+          if (changeBills[bill]) {
+            changeBills[bill] += 1
           } else {
-            bills[bill] = 1
+            changeBills[bill] = 1
           }
           leftover = (leftover - bill)
         }
       }
-      setCcBills(bills)
-    } else if (youPay === weNeed) {
+      setCcBills(changeBills)
+    } else if (leftover === 0) {
       try {
         e.preventDefault()
         let fact = await axios.get('https://uselessfacts.jsph.pl/random.json?language=en')
         setFunFact(fact.data.text)
 
       } catch (error) {
+        console.log(error)
         e.preventDefault()
       }
     } else {
@@ -46,7 +47,7 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <main className="App">
       <img src={logo} alt="Crave logo" />
       <div >Elevating expectations for food delivery.</div>
       <strong><div>www.cravedelivery.com</div></strong>
@@ -79,7 +80,7 @@ function App() {
         <div>Here's a fun fact for you:</div>
         <div className='funFact'>{funFact}</div>
       </div> : ''}
-    </div>
+    </main>
   );
 }
 
